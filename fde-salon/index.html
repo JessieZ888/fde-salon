@@ -638,6 +638,12 @@ body.nomark .slide::after{ display:none; }
   #hudtxt b{ color:#ccd6de; font-weight:600; }
   #keys{ opacity:.8; }
 
+  /* 手机端：隐藏键盘快捷键提示，底栏只留页码，保证一行显示 */
+  @media (max-width: 700px){
+    #keys{ display:none; }
+    #hudtxt{ white-space:nowrap; font-size:12px; padding:8px 14px; }
+  }
+
   /* 总览：缩略图墙，点一张跳过去 */
   body.overview{ overflow:auto; }
   body.overview #stage{ position:static; display:block; padding:26px 26px 60px; }
